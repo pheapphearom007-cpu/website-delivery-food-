@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Delivery App</title>
+</head>
+<body>
+    <header>
+        <h1>Food Delivery App</h1>
+        <div class="header-buttons">
+            <button onclick="goHome()">  home </button>
+            <button>  menu </button>
+            <button>contact</button>
+        </div>
+    </header>
+    <main>
+        <section id="restaurant-list">
+            <h2>Restaurants</h2>
+            <ul>
+                <li>
+                    <img src="OIP.webp" alt="Italian Bistro">
+                    <p class="price">$12.99</p>
+                    <h3>Italian Bistro</h3>
+                    <p>Address: 123 Pasta St</p>
+                    <button onclick="orderFood('Italian Bistro')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP (1).webp" alt="Mexican Grill">
+                    <p class="price">$10.99</p>
+                    <h3>Mexican Grill</h3>
+                    <p>Address: 456 Taco Ave</p>
+                    <button onclick="orderFood('Mexican Grill')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP (2).webp" alt="Sushi Place">
+                    <p class="price">$15.99</p>
+                    <h3>Sushi Place</h3>
+                    <p>Address: 789 Sushi Rd</p>
+                    <button onclick="orderFood('Sushi Place')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP (3).webp" alt="Burger House">
+                    <p class="price">$9.99</p>
+                    <h3>Burger House</h3>
+                    <p>Address: 321 Burger Blvd</p>
+                    <button onclick="orderFood('Burger House')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP (4).webp" alt="Khmer Kitchen">
+                    <p class="price">$11.99</p>
+                    <h3>Khmer Kitchen</h3>
+                    <p>Address: 654 Spice Lane</p>
+                    <button onclick="orderFood('Thai Kitchen')">Order Now</button>
+                </li>
+                <li>
+                    <img src="2.webp" alt="Indian Curry House">
+                    <p class="price">$13.99</p>
+                    <h3>Indian Curry House</h3>
+                    <p>Address: 987 Tandoor Terrace</p>
+                    <button onclick="orderFood('Indian Curry House')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP.webp" alt="Pizza Palace">
+                    <p class="price">$11.49</p>
+                    <h3>Pizza Palace</h3>
+                    <p>Address: 147 Mozzarella Mews</p>
+                    <button onclick="orderFood('Pizza Palace')">Order Now</button>
+                </li>
+                <li>
+                    <img src="2.webp" alt="Vegan Cafe">
+                    <p class="price">$10.49</p>
+                    <h3>Vegan Cafe</h3>
+                    <p>Address: 258 Green Garden Way</p>
+                    <button onclick="orderFood('Vegan Cafe')">Order Now</button>
+                </li>
+                <li>
+                    <img src="OIP (5).webp" alt="Khmer Noodle">
+                    <p class="price">$5.99</p>
+                    <h3>Khmer Noodle</h3>
+                    <p>Address: 1289 Sieam Reap</p>
+                    <button onclick="orderFood('Khmer Noodle')">Order Now</button>
+                </li>
+            </ul>
+        </section>
+        <section id="order-form" style="display:none;">
+            <h2>Order Food</h2>
+            <form id="form">
+                <label for="restaurant">Restaurant:</label>
+                <input type="text" id="restaurant" readonly>
+                <label for="items">Items:</label>
+                <input type="text" id="items" placeholder="Enter items (e.g., Pizza, Salad)">
+                <button type="submit">Submit Order</button>
+            </form>
+            <button onclick="cancelOrder()">Cancel</button>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
